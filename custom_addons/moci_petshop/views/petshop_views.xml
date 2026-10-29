@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View untuk Hewan Peliharaan (List/Tree) -->
+    <record id="view_moci_pet_tree" model="ir.ui.view">
+        <field name="name">moci.pet.tree</field>
+        <field name="model">moci.pet</field>
+        <field name="arch" type="xml">
+            <tree string="Hewan Peliharaan">
+                <field name="name"/>
+                <field name="species"/>
+                <field name="owner_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View untuk Hewan Peliharaan (Form) -->
+    <record id="view_moci_pet_form" model="ir.ui.view">
+        <field name="name">moci.pet.form</field>
+        <field name="model">moci.pet</field>
+        <field name="arch" type="xml">
+            <form string="Hewan Peliharaan">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="species"/>
+                        <field name="breed"/>
+                        <field name="owner_id"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Window -->
+    <record id="action_moci_pet" model="ir.actions.act_window">
+        <field name="name">Hewan Peliharaan</field>
+        <field name="res_model">moci.pet</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- View untuk Grooming (List/Tree) -->
+    <record id="view_moci_grooming_tree" model="ir.ui.view">
+        <field name="name">moci.grooming.tree</field>
+        <field name="model">moci.grooming</field>
+        <field name="arch" type="xml">
+            <tree string="Layanan Grooming">
+                <field name="name"/>
+                <field name="pet_id"/>
+                <field name="service_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View untuk Grooming (Form) -->
+    <record id="view_moci_grooming_form" model="ir.ui.view">
+        <field name="name">moci.grooming.form</field>
+        <field name="model">moci.grooming</field>
+        <field name="arch" type="xml">
+            <form string="Layanan Grooming">
+                <header>
+                    <!-- Ubah atribut invisible menjadi attrs di sini -->
+                    <button name="action_create_sales_order" type="object" string="Buat Tagihan (SO)" class="oe_highlight" attrs="{'invisible': [('sale_order_id', '!=', False)]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,process,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="pet_id"/>
+                            <field name="owner_id"/>
+                        </group>
+                        <group>
+                            <field name="service_type"/>
+                            <field name="service_date"/>
+                            <field name="price"/>
+                            <!-- Ubah atribut invisible menjadi attrs di sini juga -->
+                            <field name="sale_order_id" attrs="{'invisible': [('sale_order_id', '=', False)]}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Window Grooming -->
+    <record id="action_moci_grooming" model="ir.actions.act_window">
+        <field name="name">Layanan Grooming</field>
+        <field name="res_model">moci.grooming</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

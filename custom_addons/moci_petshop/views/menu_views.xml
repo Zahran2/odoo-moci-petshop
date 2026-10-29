@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menu Utama Aplikasi Moci Petshop -->
+    <menuitem id="menu_moci_root" name="Moci Petshop" sequence="10"/>
+
+    <!-- Sub Menu -->
+    <menuitem id="menu_moci_pet" name="Hewan Peliharaan" parent="menu_moci_root" action="action_moci_pet" sequence="1"/>
+    <menuitem id="menu_moci_grooming" name="Layanan Grooming" parent="menu_moci_root" action="action_moci_grooming" sequence="2"/>
+</odoo>

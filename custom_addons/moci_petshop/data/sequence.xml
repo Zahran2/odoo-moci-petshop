@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequence untuk Layanan Grooming -->
+        <record id="seq_moci_grooming" model="ir.sequence">
+            <field name="name">Grooming Sequence</field>
+            <field name="code">moci.grooming</field>
+            <field name="prefix">GRM/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>
