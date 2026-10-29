@@ -55,11 +55,10 @@ To test this module on your local machine using Docker:
    - Remove the `Apps` search filter, search for `Moci Petshop`, and click **Activate**.
 
 ## 📸 Screenshots
+<img width="1365" height="322" alt="image" src="https://github.com/user-attachments/assets/636c4a87-e3ed-43a2-bcf2-b7624c254622" />
+<img width="1365" height="273" alt="image" src="https://github.com/user-attachments/assets/dbb4b6be-c7f5-47d8-ab2c-5348d17ab8ce" />
+<img width="1365" height="403" alt="image" src="https://github.com/user-attachments/assets/0043d7fc-25a5-4bb1-9f41-5dba216d4777" />
 
-*(You can add screenshots of your application here to make it more appealing to recruiters. To add images, simply drag and drop them into the GitHub editor while editing this README, or use the markdown image syntax like this: `![Grooming Form](link_to_image)`)*
-
-- **Grooming Service Form**
-- **Automated Sales Order Integration**
 
 ## 👨‍💻 About the Developer
 
